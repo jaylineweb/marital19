@@ -1,0 +1,40 @@
+/* gnb frame */
+#css_gnb_frame {
+	width: 750px;
+	height: 80px;
+
+}
+/* main-menu */
+#css_gnb_frame div.mm_wrap {
+	/* none */
+	border: 0px transparent solid;
+	background-color: transparent;
+}
+#css_gnb_frame ul.mm li {
+	margin-left: 100px;
+	font-size: 18px;
+	color: #111111;
+}
+#css_gnb_frame ul.mm li:hover, #css_gnb_frame ul.mm li.hover {
+	color: #09449E;
+}
+/* sub-menu */
+#css_gnb_frame ul.sm {
+	margin-top: 80px;
+	/* none */
+	border: 0px transparent solid;
+	background-color: transparent;
+}
+#css_gnb_frame ul.sm li {
+	margin-left: 00px;
+	color: #EBEBEB;
+}
+#css_gnb_frame ul.sm li:hover, #css_gnb_frame ul.sm li.hover {
+	color: #FFEB63;
+}
+/* sub-menu margin */
+#css_gnb_frame ul.sm.s1 { margin-left: 0px; }
+#css_gnb_frame ul.sm.s3 { margin-left: 182px; }
+#css_gnb_frame ul.sm.s6 { margin-left: 438px; }
+#css_gnb_frame ul.sm.s7 { margin-left: 646px; }
+#css_gnb_frame ul.sm.s5 { margin-left: 808px; }

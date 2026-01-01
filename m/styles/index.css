@@ -1,0 +1,108 @@
+/* index.html 전용 스타일 */
+
+/* 메인 레이아웃 */
+.main_r {display:flex;flex-direction:column;width:100%;min-width:320px;min-height:100vh;}
+.main_header {flex-shrink:0;}
+.main_con {flex:1;width:100%;}
+.main_wrap {max-width:860px;margin:0 auto;}
+
+/* IE10 대응 */
+@media screen and (-ms-high-contrast:active),(-ms-high-contrast:none) {
+    .main_r{position:relative;}
+    .main_con{height:360px !important;}
+}
+
+/* IE 대응 (조건부 주석용) */
+.main_r.ie-fix {position:relative !important;}
+.main_con.ie-fix {height:360px !important;}
+/* 레거시 td 선택자 호환성 유지 (기존 스크립트 호환을 위해) */
+td.main_con {height:100%;}
+/* 메인 배너 영역 */
+#main3 {position:relative;margin:0;}
+#main3 > div.banner-wrap {margin-top:0;}
+#main3 > div.banner-wrap.first {margin-top:0;}
+#main3 img {width:100% !important;height:auto !important;}
+/* 배너 슬라이더 */
+#banner_3.banner-wrap,#banner_3 .banner-wrap {width:1920px;height:350px;}
+#banner_3.banner-wrap div.slides {width:1920px;height:350px;display:none;}
+#banner_3.banner-wrap div.loading {width:100%;margin:0 auto;text-align:center;top:167px;position:absolute;opacity:.7;}
+/* 배너 로딩 오버레이 */
+.banner-loading-overlay {position:absolute;top:0;left:0;}
+.banner-loading-bg {filter:alpha(opacity=70);opacity:0.7;position:absolute;display:block;background-color:#000;top:0;left:0;width:100%;height:100%;}
+.banner-loading-spinner {position:absolute;display:block;background:url(/Libs/_js/jssor/img/loading.gif) no-repeat center center;top:0;left:0;width:100%;height:100%;}
+
+/* 배너 이미지 */
+.banner-image img,[id^="banner_"] .banner_image_0 img,[id^="banner_"] .banner_image_1 img,[id^="banner_"] .banner_image_2 img,[id^="banner_"] .banner_image_3 img,[id^="banner_"] .banner_image_4 img,[id^="banner_"] .banner_image_5 img,[id^="banner_"] .banner_image_6 img,[id^="banner_"] .banner_image_7 img,[id^="banner_"] .banner_image_8 img,[id^="banner_"] .banner_image_9 img,[id^="banner_"] .banner_image_10 img,[id^="banner_"] .banner_image_11 img,[id^="banner_"] .banner_image_12 img,[id^="banner_"] .banner_image_13 img,[id^="banner_"] .banner_image_14 img,[id^="banner_"] .banner_image_15 img,[id^="banner_"] .banner_image_16 img,[id^="banner_"] .banner_image_17 img,[id^="banner_"] .banner_image_18 img,[id^="banner_"] .banner_image_19 img,[id^="banner_"] .banner_image_20 img,[id^="banner_"] .banner_image_21 img,[id^="banner_"] .banner_image_22 img,[id^="banner_"] .banner_image_23 img,[id^="banner_"] .banner_image_24 img,[id^="banner_"] .banner_image_25 img,[id^="banner_"] .banner_image_26 img,[id^="banner_"] .banner_image_27 img,[id^="banner_"] .banner_image_28 img,[id^="banner_"] .banner_image_29 img,[id^="banner_"] .banner_image_30 img,[id^="banner_"] .banner_image_31 img,[id^="banner_"] .banner_image_32 img,[id^="banner_"] .banner_image_33 img,[id^="banner_"] .banner_image_34 img,[id^="banner_"] .banner_image_35 img,[id^="banner_"] .banner_image_36 img,[id^="banner_"] .banner_image_37 img,[id^="banner_"] .banner_image_38 img,[id^="banner_"] .banner_image_39 img,[id^="banner_"] .banner_image_40 img,[id^="banner_"] .banner_image_41 img,[id^="banner_"] .banner_image_42 img,[id^="banner_"] .banner_image_43 img,[id^="banner_"] .banner_image_44 img,[id^="banner_"] .banner_image_45 img,[id^="banner_"] .banner_image_46 img,[id^="banner_"] .banner_image_47 img,[id^="banner_"] .banner_image_48 img,[id^="banner_"] .banner_image_49 img,[id^="banner_"] .banner_image_50 img,[id^="banner_"] .banner_image_51 img,[id^="banner_"] .banner_image_52 img,[id^="banner_"] .banner_image_53 img,[id^="banner_"] .banner_image_54 img,[id^="banner_"] .banner_image_55 img,[id^="banner_"] .banner_image_56 img,[id^="banner_"] .banner_image_57 img,[id^="banner_"] .banner_image_58 img,[id^="banner_"] .banner_image_59 img,[id^="banner_"] .banner_image_60 img,[id^="banner_"] .banner_image_61 img,[id^="banner_"] .banner_image_62 img,[id^="banner_"] .banner_image_63 img,[id^="banner_"] .banner_image_64 img,[id^="banner_"] .banner_image_65 img,[id^="banner_"] .banner_image_66 img,[id^="banner_"] .banner_image_67 img,[id^="banner_"] .banner_image_68 img,[id^="banner_"] .banner_image_69 img,[id^="banner_"] .banner_image_70 img,[id^="banner_"] .banner_image_71 img,[id^="banner_"] .banner_image_72 img,[id^="banner_"] .banner_image_73 img,[id^="banner_"] .banner_image_74 img,[id^="banner_"] .banner_image_75 img,[id^="banner_"] .banner_image_76 img,[id^="banner_"] .banner_image_77 img,[id^="banner_"] .banner_image_78 img,[id^="banner_"] .banner_image_79 img,[id^="banner_"] .banner_image_80 img,[id^="banner_"] .banner_image_81 img,[id^="banner_"] .banner_image_82 img,[id^="banner_"] .banner_image_83 img,[id^="banner_"] .banner_image_84 img,[id^="banner_"] .banner_image_85 img,[id^="banner_"] .banner_image_86 img,[id^="banner_"] .banner_image_87 img,[id^="banner_"] .banner_image_88 img,[id^="banner_"] .banner_image_89 img,[id^="banner_"] .banner_image_90 img,
+.banner_image_0 img,.banner_image_1 img,.banner_image_2 img,.banner_image_3 img,.banner_image_4 img,.banner_image_5 img,.banner_image_6 img,.banner_image_7 img,.banner_image_8 img,.banner_image_9 img,.banner_image_10 img,.banner_image_11 img,.banner_image_12 img,.banner_image_13 img,.banner_image_14 img,.banner_image_15 img,.banner_image_16 img,.banner_image_17 img,.banner_image_18 img,.banner_image_19 img,.banner_image_20 img,.banner_image_21 img,.banner_image_22 img,.banner_image_23 img,.banner_image_24 img,.banner_image_25 img,.banner_image_26 img,.banner_image_27 img,.banner_image_28 img,.banner_image_29 img,.banner_image_30 img,.banner_image_31 img,.banner_image_32 img,.banner_image_33 img,.banner_image_34 img,.banner_image_35 img,.banner_image_36 img,.banner_image_37 img,.banner_image_38 img,.banner_image_39 img,.banner_image_40 img,.banner_image_41 img,.banner_image_42 img,.banner_image_43 img,.banner_image_44 img,.banner_image_45 img,.banner_image_46 img,.banner_image_47 img,.banner_image_48 img,.banner_image_49 img,.banner_image_50 img,.banner_image_51 img,.banner_image_52 img,.banner_image_53 img,.banner_image_54 img,.banner_image_55 img,.banner_image_56 img,.banner_image_57 img,.banner_image_58 img,.banner_image_59 img,.banner_image_60 img,.banner_image_61 img,.banner_image_62 img,.banner_image_63 img,.banner_image_64 img,.banner_image_65 img,.banner_image_66 img,.banner_image_67 img,.banner_image_68 img,.banner_image_69 img,.banner_image_70 img,.banner_image_71 img,.banner_image_72 img,.banner_image_73 img,.banner_image_74 img,.banner_image_75 img,.banner_image_76 img,.banner_image_77 img,.banner_image_78 img,.banner_image_79 img,.banner_image_80 img,.banner_image_81 img,.banner_image_82 img,.banner_image_83 img,.banner_image_84 img,.banner_image_85 img,.banner_image_86 img,.banner_image_87 img,.banner_image_88 img,.banner_image_89 img,.banner_image_90 img {width:340px;height:350px;}
+
+/* 배너 네비게이션 */
+.banner-bullet {display:none;position:absolute;}
+.banner-bullet-prototype {position:absolute;width:19px;height:19px;text-align:center;line-height:19px;color:White;font-size:12px;}
+.banner-arrow-left,.banner-arrow-right {display:none;position:absolute;top:123px;width:55px;height:55px;}
+.banner-arrow-left {left:8px;}
+.banner-arrow-right {right:8px;}
+
+/* 메인 비주얼 */
+.main-visual img {width:100%;}
+/* 섹션 스타일 */
+.section-white {overflow:hidden;width:100%;padding:40px 0 100px;background:#fff;}
+.section-white img {width:100%;}
+.banner-container {overflow:hidden;width:320px;margin:-80px auto 40px;}
+
+/* 프랜차이즈 섹션 */
+.franchise-section {overflow:hidden;background:url(/m/images/img/main/m_bn2_bg.jpg) no-repeat center center;background-size:cover;}
+.franchise-title {width:40%;margin:40px 0 0 40px;}
+.franchise-title img {width:100%;}
+.franchise-list {float:right;width:70%;margin:20px 20px 40px 0;}
+.franchise-item {float:left;width:31%;margin:0 1% 1% 0;}
+.franchise-item:last-child {margin-right:0;}
+.franchise-item img {width:100%;}
+
+/* 커뮤니티 섹션 */
+.community-section {overflow:hidden;width:100%;padding-top:40px;background:#f0f0f0;}
+.community-title {display:block;width:34%;margin-left:40px;}
+.community-video {margin:0 40px -4px;}
+.community-video iframe {width:100%;height:200px;}
+.community-menu {overflow:hidden;padding:0 40px;background:#d2d8e2;}
+.community-menu-item {float:left;width:33.33%;}
+.community-menu-item img {width:100%;}
+.community-bottom {overflow:hidden;padding:0 40px 40px;background:#d2d8e2;}
+.community-bottom img {width:100%;}
+
+/* 문의 섹션 */
+.inquiry-section {overflow:hidden;background:#dadada;}
+.inquiry-section img {width:100%;}
+/* 퀵 메뉴 */
+.quick-menu {position:fixed;right:10px;bottom:40px;width:20%;max-width:100px;}
+.quick-menu-item {width:100%;margin-bottom:5px;}
+.quick-menu-item:last-child {margin-bottom:0;}
+.quick-menu-item img {width:100%;}
+
+/* 네비게이션 */
+.nav-logo img {width:100px;}
+.nav-clear {clear:both;}
+.gnb-hidden {height:0;border-bottom:0;font-size:0;line-height:0;}
+/* 로그인 링크 */
+.login-link {font-weight:bold;}
+
+/* 푸터 */
+.footer-text {font-size:10px;}
+.footer-text p {margin-left:10px;margin-bottom:4px;text-align:left;letter-spacing:-0.5px;color:#ddd;font-size:12px;}
+.footer-text p:last-child {font-size:11px;}
+.footer-center {text-align:center;}
+.footer-link {color:#ccc;}
+
+/* 팝업 */
+.popup-content img {height:auto;max-width:100%;}
+.popup-hidden {display:none;font-size:12px;}
+.popup-iframe {position:absolute;width:1px;height:1px;}
+.popup-table {visibility:hidden;cursor:move;}
+.popup-checkbox {cursor:pointer;}
+.popup-label {height:14px;padding:2px 8px 0 0;font-size:9pt;cursor:pointer;}
+
+/* 유틸리티 클래스 */
+.full-width {width:100%;}
+.clear-both {clear:both;}
+.text-center {text-align:center;}
+.text-left {text-align:left;}
+

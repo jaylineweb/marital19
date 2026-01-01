@@ -1,0 +1,327 @@
+/* 반응형 스타일 - 마리텔 메인 페이지 */
+/* PC 레이아웃은 기존 스타일 유지, 모바일/태블릿에서만 반응형 적용 */
+
+/* 기본 설정 - PC에는 영향 없음 */
+@media screen and (max-width: 1024px) {
+	* {
+		box-sizing: border-box;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+/* 모바일 스타일 (768px 이하) */
+@media screen and (max-width: 768px) {
+	/* 컨테이너 기본 설정 */
+	#body_wrap {
+		min-width: auto !important;
+		width: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
+	html {
+		min-width: auto !important;
+		overflow-x: hidden;
+	}
+
+	/* 헤더 조정 */
+	#header {
+		min-width: auto !important;
+		padding: 10px;
+	}
+
+	.header_m {
+		min-width: auto !important;
+	}
+
+	#top_frame {
+		padding: 10px;
+		margin-left: 0 !important;
+	}
+
+	.logo img {
+		max-width: 80px !important;
+		width: 80px !important;
+		height: auto !important;
+	}
+
+	/* 메뉴 조정 */
+	#gnb_frame {
+		margin-left: 0 !important;
+	}
+
+	.mm_wrap ul.mm {
+		flex-direction: column;
+	}
+
+	.mm_wrap ul.mm li {
+		width: 100%;
+		text-align: center;
+	}
+
+	/* 배너 조정 */
+	#visual_frame {
+		overflow: hidden;
+		left: 0 !important;
+		margin-left: 0 !important;
+		width: 100% !important;
+	}
+
+	#banner_2.banner-wrap,
+	#banner_2 .banner-wrap {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 300px;
+	}
+
+	#banner_2.banner-wrap div.slides {
+		width: 100% !important;
+		height: auto !important;
+		min-height: 300px;
+	}
+
+	#banner_2.banner-wrap img {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 300px;
+		object-fit: cover;
+	}
+
+	#banner_3.banner-wrap,
+	#banner_3 .banner-wrap {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	#banner_3.banner-wrap div.slides {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	#banner_3.banner-wrap img {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	/* 배너 컨테이너들 */
+	#banner_13.banner-wrap,
+	#banner_15.banner-wrap,
+	#banner_17.banner-wrap,
+	#banner_18.banner-wrap,
+	#banner_19.banner-wrap,
+	#banner_20.banner-wrap,
+	#banner_23.banner-wrap,
+	#banner_25.banner-wrap,
+	#banner_30.banner-wrap {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	#banner_13.banner-wrap img,
+	#banner_15.banner-wrap img,
+	#banner_17.banner-wrap img,
+	#banner_18.banner-wrap img,
+	#banner_19.banner-wrap img,
+	#banner_20.banner-wrap img,
+	#banner_23.banner-wrap img,
+	#banner_25.banner-wrap img,
+	#banner_30.banner-wrap img {
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	/* 인라인 스타일 오버라이드 - 모바일에서만 */
+	img[style*="width:340px"],
+	img[style*="width:550px"],
+	img[style*="width:551px"],
+	img[style*="width:1920px"] {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	/* 메인 콘텐츠 레이아웃 */
+	#main_container {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	#main_cont {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.bn_wrap1,
+	.bn_wrap2,
+	.bn_wrap3,
+	.bn_wrap4,
+	.bn_wrap5 {
+		width: 100% !important;
+		max-width: 100% !important;
+		flex-direction: column;
+	}
+
+	.bn1_1,
+	.bn1_2 {
+		width: 100% !important;
+		margin-bottom: 20px;
+	}
+
+	.bn2_01,
+	.bn2_02 {
+		width: 100% !important;
+		margin-bottom: 20px;
+	}
+
+	.bn_wrap3_01,
+	.bn_wrap3_02,
+	.bn_wrap3_03,
+	.bn_wrap3_04 {
+		width: 100% !important;
+		margin-bottom: 20px;
+	}
+
+	.bn3_1,
+	.bn3_2,
+	.bn3_3,
+	.bn3_4 {
+		width: 100% !important;
+	}
+
+	/* 퀵배너 테이블 */
+	table[width="940"] {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	/* 푸터 조정 */
+	#footer {
+		width: 100% !important;
+	}
+
+	#footer_frame {
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.f_left_wrap,
+	.f_right_wrap {
+		width: 100% !important;
+		margin-bottom: 20px;
+	}
+
+	.footer_menu {
+		width: 100% !important;
+		margin-bottom: 15px;
+	}
+
+	/* 폼 조정 */
+	.consult_wrap {
+		padding: 10px;
+		width: 100% !important;
+	}
+
+	#consult_frame2 {
+		padding: 15px;
+		width: 100% !important;
+	}
+
+	.input_sms2,
+	.sms_box2 {
+		width: 100% !important;
+	}
+
+	.quick2_wrap {
+		display: none;
+	}
+}
+
+/* 작은 모바일 (480px 이하) */
+@media screen and (max-width: 480px) {
+	.logo img {
+		max-width: 60px !important;
+		width: 60px !important;
+	}
+
+	#banner_2.banner-wrap,
+	#banner_2 .banner-wrap {
+		min-height: 200px;
+	}
+
+	#banner_2.banner-wrap div.slides {
+		min-height: 200px;
+	}
+
+	#banner_2.banner-wrap img {
+		min-height: 200px;
+	}
+
+	.bn_wrap1,
+	.bn_wrap2,
+	.bn_wrap3 {
+		padding: 0 10px;
+	}
+}
+
+/* 태블릿 스타일 (769px ~ 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+	#body_wrap {
+		min-width: auto !important;
+	}
+
+	html {
+		min-width: auto !important;
+	}
+
+	#header {
+		min-width: auto !important;
+	}
+
+	.header_m {
+		min-width: auto !important;
+	}
+
+	#visual_frame {
+		left: 0 !important;
+		margin-left: 0 !important;
+		width: 100% !important;
+	}
+
+	#banner_2.banner-wrap,
+	#banner_2 .banner-wrap {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 500px;
+	}
+
+	#banner_2.banner-wrap div.slides {
+		width: 100% !important;
+		height: auto !important;
+		min-height: 500px;
+	}
+
+	#banner_2.banner-wrap img {
+		width: 100% !important;
+		max-width: 100% !important;
+		height: auto !important;
+		min-height: 500px;
+		object-fit: cover;
+	}
+
+	.bn_wrap1 {
+		flex-wrap: wrap;
+	}
+
+	.bn1_1,
+	.bn1_2 {
+		width: 50%;
+	}
+}

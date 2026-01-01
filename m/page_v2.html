@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <title>페이지</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="/m/styles/common.css" rel="stylesheet" type="text/css">
+    <link href="/m/styles/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="page-content">
+        <p>콘텐츠를 불러오는 중...</p>
+    </div>
+
+    <script>
+        // 방법 2: JavaScript 객체에 직접 데이터 저장 (JSON 파일 로드 불필요)
+        var pagesData = {
+            "17": {
+                "title": "브랜드소개",
+                "content": "<h2>브랜드소개</h2><p>마리텔 브랜드에 대한 소개 내용입니다.</p>"
+            },
+            "44": {
+                "title": "가맹절차",
+                "content": "<h2>가맹절차</h2><p>가맹 절차에 대한 안내입니다.</p>"
+            },
+            "45": {
+                "title": "가맹비용",
+                "content": "<h2>가맹비용</h2><p>가맹비용에 대한 안내입니다.</p>"
+            },
+            "56": {
+                "title": "사업비전",
+                "content": "<h2>사업비전</h2><p>사업비전에 대한 내용입니다.</p>"
+            }
+        };
+
+        // URL 파라미터에서 pid 값 가져오기
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // 페이지 로드 시 콘텐츠 표시
+        window.addEventListener('DOMContentLoaded', function() {
+            var pid = getUrlParameter('pid');
+            
+            if (!pid) {
+                document.getElementById('page-content').innerHTML = '<p>페이지 ID가 지정되지 않았습니다.</p>';
+                return;
+            }
+
+            var pageData = pagesData[pid];
+            if (pageData) {
+                document.title = pageData.title + ' - 마리텔';
+                document.getElementById('page-content').innerHTML = pageData.content;
+            } else {
+                document.getElementById('page-content').innerHTML = '<p>해당 페이지를 찾을 수 없습니다.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
+

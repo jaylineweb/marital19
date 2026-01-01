@@ -1,0 +1,50 @@
+
+.color {color:#0F2053} /*테마색*/
+.tcolor {color:#333333} /*테마글자색*/
+.bcolor {color:#0F2053} /*게시판 배경색*/
+.btcolor {color:#F1F1F1} /*게시판 글자색*/
+
+/*테마 관련 배경색*/
+.color_b {background-color:#0F2053} /*테마색*/
+.tcolor_b {background-color:#333333} /*테마글자색*/
+.bcolor_b {background-color:#0F2053} /*게시판 배경색*/
+.btcolor_b {background-color:#F1F1F1} /*게시판 글자색*/
+
+/*사이트 backgroud-color 대표색*/
+.img_bgc{background-color:#0F2053;color:#333333;}
+.hgnb_bg{background-color:url(%s) no-repeat left top}
+
+/*탭 bgcolor 대표색*/
+.prd_tabs li{background-color:#0F2053}
+.tab_choice{background-color:#0F2053!important}
+
+/*Main_배경색 및 타이틀*/
+.tab_wrap li{color:#0F2053}
+.con_tit{color:#0F2053}
+
+/*Main_언더라인 대표색*/
+.brd1{border-bottom:1px solid #0F2053}
+.brd5{border-bottom:5px solid #0F2053}
+
+/*Sub_언더라인 대표색*/
+con_top_box{border-bottom:1px solid #0F2053}
+
+/*Sub_우측Content 상단타이틀 블릿 대표색*/
+.tit_bullet{background-color:#0F2053;border: 1px solid #0F2053}
+
+/*배경색+타이틀명 라인색*/
+.cla_bg{background-color:#0F2053;color:#F1F1F1}
+.t_bgcolor,.t_bgcolor th,.t_bgcolor tr td,.bullet_img{background-color:#0F2053;color:#F1F1F1}
+.Form_top,.Form_top2{border-top:2px solid #0F2053}
+.Form_box{border:2px solid #0F2053}
+
+/*form 게시판색*/
+.subtitle {color:#0F2053}
+
+/*상단영역 */
+#header{border-top:35px solid #0F2053;border-bottom:0px solid #0F2053}
+
+/*쇼핑몰추가*/
+.bcolor_b2{border:1px solid #0F2053;color:#0F2053}
+.shop_bt2{border:1px solid #0F2053;}
+.brd_b{border-top:2px solid #0F2053;}
