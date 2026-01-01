@@ -20,6 +20,8 @@
 	<link rel="stylesheet" href="./design/skin/css_menu.css?v=1" />
 	<link rel="stylesheet" href="./design/top/gnb.css?v=1" />
 	<link rel="stylesheet" href="./design/main/responsive.css" />
+	<!-- Swiper CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<script>
 		window.top.document.title = document.title
 	</script>
@@ -311,183 +313,83 @@
 						<!-- 슬라이드형 배너 템플릿 -->
 						<link rel="stylesheet" href="/template/rankup_module/rankup_banner/banner.css" />
 						<style>
-
 							#banner_2.banner-wrap,
 							#banner_2 .banner-wrap {
-
 								width: 1920px;
-
 								height: 986px;
-
+								position: relative;
 							}
-
-
-
-							#banner_2.banner-wrap div.slides {
-
+							#banner_2 .banner-swiper {
 								width: 1920px;
-
 								height: 986px;
-
 							}
-
-
-
-							#banner_2 .banner-bullet div,
-							#banner_2 .banner-bullet div:hover,
-							#banner_2 .banner-bullet .av {
-
-								opacity: .10;
-
-								-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-								/* IE 8 */
-
-								filter: alpha(opacity=50);
-								/* IE 5-7 */
-
-								-moz-opacity: 0.10;
-								/* Netscape */
-
-								-khtml-opacity: 0.10;
-								/* Safari 1.x */
-
-								background: url(/Libs/js/jssor/img/b16.png) no-repeat;
-
+							#banner_2 .banner-swiper .swiper-slide {
+								width: 1920px;
+								height: 986px;
 							}
-
-
-
-							#banner_2 .banner-bullet div {
-								background-position: -5px -5px;
-							}
-
-							#banner_2 .banner-bullet div:hover,
-							#banner_2 .banner-bullet .av:hover {
-								background-position: -35px -5px;
-							}
-
-							#banner_2 .banner-bullet .av {
-								background-position: -65px -5px;
-							}
-
-							#banner_2 .banner-bullet .dn,
-							#banner_2 .banner-bullet .dn:hover {
-								background-position: -95px -5px;
-							}
-
-
-
-
-
-							#banner_2 .banner-arrow-left,
-							#banner_2 .banner-arrow-right,
-							#banner_2 .banner-arrow-leftdn,
-							#banner_2 .banner-arrow-rightdn {
-
-								opacity: .10;
-
-								-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-								/* IE 8 */
-
-								filter: alpha(opacity=50);
-								/* IE 5-7 */
-
-								-moz-opacity: 0.10;
-								/* Netscape */
-
-								-khtml-opacity: 0.10;
-								/* Safari 1.x */
-
-								background: url(/Libs/js/jssor/img/a15.png) center center no-repeat;
-
-								position: absolute;
-
-								cursor: pointer;
-
+							#banner_2 .banner-swiper .swiper-slide img {
+								width: 100%;
+								height: 100%;
+								object-fit: cover;
 								display: block;
-
-								overflow: hidden;
-
 							}
-
-
-
-							#banner_2 .banner-arrow-left {
-								background-position: -3px -33px;
+							#banner_2 .swiper-pagination {
+								bottom: 20px;
 							}
-
-							#banner_2 .banner-arrow-right {
-								background-position: -63px -33px;
+							#banner_2 .swiper-pagination-bullet {
+								width: 12px;
+								height: 12px;
+								background: rgba(255, 255, 255, 0.5);
+								opacity: 1;
 							}
-
-							#banner_2 .banner-arrow-left:hover {
-								background-position: -123px -33px;
+							#banner_2 .swiper-pagination-bullet-active {
+								background: #fff;
 							}
-
-							#banner_2 .banner-arrow-right:hover {
-								background-position: -183px -33px;
+							#banner_2 .swiper-button-next,
+							#banner_2 .swiper-button-prev {
+								color: #fff;
+								opacity: 0.7;
 							}
-
-							#banner_2 .banner-arrow-leftdn {
-								background-position: -243px -33px;
-							}
-
-							#banner_2 .banner-arrow-rightdn {
-								background-position: -303px -33px;
+							#banner_2 .swiper-button-next:hover,
+							#banner_2 .swiper-button-prev:hover {
+								opacity: 1;
 							}
 						</style>
 						<div class="banner-wrap first" data-position="main1" data-type="slide" id="banner_2">
-							<!-- 슬라이드 이미지 -->
-							<div class="slides" u="slides">
-								<div class="banner_image_0"><img alt="banner"
-										src="./PEG/banner/2/86c04ca5d1ae099559278e9a5788b56be366980f1734921443.jpg"
-										style="width:1920px;height:986px" /></div>
-								<div class="banner_image_1"><img alt="banner"
-										src="./PEG/banner/2/b3603aa10eb466f569f1953aef3ba97f93c1d34e1694509816.jpg"
-										style="width:1920px;height:986px" /></div>
+							<!-- Swiper 슬라이드 -->
+							<div class="swiper banner-swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img alt="banner" src="./PEG/banner/2/86c04ca5d1ae099559278e9a5788b56be366980f1734921443.jpg" style="width:1920px;height:986px" /></div>
+									<div class="swiper-slide"><img alt="banner" src="./PEG/banner/2/b3603aa10eb466f569f1953aef3ba97f93c1d34e1694509816.jpg" style="width:1920px;height:986px" /></div>
+								</div>
+								<!-- Pagination (불릿) -->
+								<div class="swiper-pagination"></div>
+								<!-- Navigation (화살표) -->
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
 							</div>
-							<!-- 불릿 -->
-							<div class="banner-bullet style-square position_bc" style="position: absolute; display:none"
-								u="navigator">
-								<div style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"
-									u="prototype"></div>
-							</div>
-							<!-- 화살표 : 좌측 -->
-							<span class="banner-arrow-left" style="width: 55px; height: 55px; left: 8px;display:none"
-								u="arrowleft"></span>
-							<!-- 화살표 : 우측 -->
-							<span class="banner-arrow-right" style="width: 55px; height: 55px; right: 8px;display:none"
-								u="arrowright"></span>
 						</div>
-						<script src="/rankup_module/rankup_banner_v2/rankup_banner.js"></script>
+						<!-- Swiper JS -->
+						<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 						<script>
 							$J(function ($) {
-
-								var banner = new RANKUPBanner('banner_2', 'slide');
-
-								var banner_option = {
-
-									interval: 3000, //전환시간
-
-									duration: 500, //전환속도
-
-									orientation_play: 1, //슬라이드방향
-
-									orientation_drag: 0, //드래그 방향
-
-									arrow: 1, //화살표 사용여부
-
-									bullet: 1, //불릿 사용여부
-
-									bullet_position: 1,
-
-									hover: 1
-								};
-
-
-
-								banner.init(banner_option);
-
+								var swiper = new Swiper('#banner_2 .banner-swiper', {
+									loop: true,
+									autoplay: {
+										delay: 3000,
+										disableOnInteraction: false,
+									},
+									speed: 500,
+									pagination: {
+										el: '#banner_2 .swiper-pagination',
+										clickable: true,
+									},
+									navigation: {
+										nextEl: '#banner_2 .swiper-button-next',
+										prevEl: '#banner_2 .swiper-button-prev',
+									},
+									effect: 'slide',
+								});
 							});
 						</script>
 					</div>
@@ -497,80 +399,45 @@
 					<div class="bn1_1">
 						<style>
 							#main2 {
-
 								margin-top: 0px;
-
 								margin-right: 0px;
-
 								margin-bottom: 0px;
-
 								margin-left: 0px;
-
 							}
-
-
 
 							#main2>div.banner-wrap {
-
 								margin-top: 0px;
-
 							}
 
-
-
 							#main2>div.banner-wrap.first {
-
 								margin-top: 0px;
-
 							}
 						</style>
 						<div id="main2">
 							<!-- 고정형 배너 템플릿 -->
 							<style>
 								#banner_13.banner-wrap {
-
 									overflow: hidden;
-
 									clear: both;
-
 								}
-
-
-
 								#banner_13.banner-wrap {
-
 									width: 550px;
-
 									height: 480px;
-
 									text-align: left;
-
 								}
-
-
-
 								#banner_13.banner-wrap div {
-
 									display: inline-block;
-
 									zoom: 1;
-
 									/* IE7 HACK */
 									/* *display: inline; */
 
 									/* IE6 HACK */
 									/* _display: inline; */
-
 									margin-left: px;
-
 								}
 
-
-
 								.banner_image_0 {
-
 									margin: 0px !important;
-
 								}
 							</style>
 							<div class="banner-wrap first" data-position="main2" data-type="fix" id="banner_13">
@@ -581,549 +448,181 @@
 					<div class="bn1_2">
 						<style>
 							#main3 {
-
 								margin-top: 0px;
-
 								margin-right: 0px;
-
 								margin-bottom: 0px;
-
 								margin-left: 0px;
-
 							}
-
-
 
 							#main3>div.banner-wrap {
-
 								margin-top: 0px;
-
 							}
 
-
-
 							#main3>div.banner-wrap.first {
-
 								margin-top: 0px;
-
 							}
 						</style>
 						<div id="main3">
 							<!-- 회전형  배너 템플릿 -->
 							<link rel="stylesheet" href="/template/rankup_module/rankup_banner/banner.css" />
 							<style>
-
 								#banner_3.banner-wrap,
 								#banner_3 .banner-wrap {
-
 									width: 1920px;
-
 									height: 350px;
-
+									position: relative;
+									overflow: hidden;
 								}
-
-
-
-								#banner_3.banner-wrap div.slides {
-
-									width: 1920px;
-
-									height: 350px;
-
-									display: none;
-
-								}
-
-
-
-								#banner_3.banner-wrap div.loading {
-
+								#banner_3 .banner-swiper {
 									width: 100%;
-
-									margin: 0 auto;
-
-									text-align: center;
-
-									top: 167px;
-
-									position: absolute;
-
-									opacity: .7;
-
+									height: 100%;
+								}
+								#banner_3 .banner-swiper .swiper-slide {
+									width: 340px;
+									height: 350px;
+								}
+								#banner_3 .banner-swiper .swiper-slide img {
+									width: 100%;
+									height: 100%;
+									object-fit: cover;
+									display: block;
 								}
 							</style>
 							<div class="banner-wrap first" id="banner_3">
-								<div class="loading">
-									<img src="/Libs/js/jssor/img/loader-bert.gif">
-									</img></div>
-								<div style="position: absolute; top: 0px; left: 0px;" u="loading">
-									<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-
-            background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;">
+								<!-- Swiper 캐러셀 -->
+								<div class="swiper banner-swiper">
+									<div class="swiper-wrapper">
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/7845a25fef312579b5db6a262c83f5202a52ce7d1734920293.jpg" /></a></div>
+									<div class="swiper-slide">
+										<a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/41bda3fcf25bebf4596c6501b34c044fb5a662231734920154.jpg" /></a>
 									</div>
-									<div style="position: absolute; display: block; background: url(/Libs/js/jssor/img/loading.gif) no-repeat center center;
-
-            top: 0px; left: 0px;width: 100%;height:100%;">
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/e695a2fe98b1dda4ea2054ab26c02a6bb98b07301734920131.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/bf8612757438ee7a970e892a976e5c25ad30a5991734920115.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/24234487a42f72849a1ee83a1d7a2c9cb47b542c1734920075.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/867a324fe3a9d3baa074fed9434dc740315cc3a11734920019.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/d63af7010b41633693f8a08907918759c0d6a3f11707797614.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/7ffd2bbf98e418d9080dc5c736e2605a18ffcabe1707797511.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/2cb8f094c537cff902a3c1cb6b418821f93e2fa61702891785.png" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/6aac47e7e4b11757dc79657e2860e84c165524331728381235.png" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/cb7ae69d2af8243484cfeb477edc8d046938ce5c1702891798.png" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/1a8b65e8d8d7f60ef170ea927e6f5760727305071702891806.png" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/f02b07a6a1975e706e87626393f681f6ddea2c171698196535.png" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/1384be79c6eb5e050418a24ad1f64d332432f74c1697435919.png" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/980a388a31a85fc20fc4396cef29d2504e21b9321696487987.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/28e6594123148184ea2e2e53346708fc05e64a6d1696487972.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/3ef95b3110dd1659a2d861344a8e5d7ce553d5881696487922.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/c43c14493b9027022af641a65b1bd16db00bb18d1696487911.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/0671d168715e0baad208def68c557368b790eed81696487894.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/c8a473d1ed3144988523bf35d2a926e2a84bc2fa1696487883.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/918b33a433e5c1f6e2e0b9a6aa7c97750ef5ae001696487814.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/ab1cdf084f02eb85efd14f9581365c6f1361dd2d1696487772.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/5eeb9d6a967a364483a275957d33bc0c1db5ea2e1696487761.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/3167b0ad265cd0c51c1a9bb90ecbe688054c933f1696487576.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/4753505818b575cec73af616d1d231d6f04ad3cf1696487516.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/feacd0a4aa60c4f2868e717b21bd31cffcc94cad1696487368.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/339e31fabc43c59658f8da50bc5376301b5fa4b01696487357.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/56a94786fe6ec0c52083024b94109e8634d4cf941696487334.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/b5ce53d1e7799c72a95d14c0ae33971728d032801696487321.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/d4c27e6a5ef6d007f46bf1b484c3192acaaf72341696487301.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/597016156a955ea22e4c76cf953ecacf11e647211696487286.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/a4a9a3ad61b81ae47d15bf17c3d9fa9c88164e2e1696487230.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/435ccaeceefb0a7e7c5b5cdcca3383c38950bd901696487214.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/d0f8740def1670e6d18107954f4a8816d3dad8271696487198.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/0673c582fa72eba1d79b48b2ff4da23bd163087a1696487172.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/b8b29e2710ebac10b3e3f0297d7a600e7cfb73531696487156.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/6895d62bfb632f062752bcd0e7fe6ce2486cbae11696487122.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/e4a1e314fd9a3e4c08aa55e4cccbda9f211f8a8c1696487097.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/e05e2e015eb0937cba0a1b0c603bcff394f662a91696487058.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/c1e2f91357edd44303b33a07a1fe6b847e8a475b1696487046.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/701672020f17666465ce52cc4400e97a3f5022ab1696486573.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/d7fdd909e4440fb0981f5dddfbfcf81a2eda255f1696486536.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/d010f31bbd5628a540e78e12f2db79b7fd4e3cbb1696486519.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/22e66673f3afb38e14a3ab2a173a2f2faa4823741696486500.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/3b201d5e103230b441734e05f4c5cf6873bc6f361696486490.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/757f15a93adb9a713640179ffa758e57126998131696486469.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/a746aa59a2a215c89a07bb10c7d1490ae95b35221696486459.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/e12ade9d8ce74a297ea6118a663fe05d12e122951696486422.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/227e146b1bc102da484b1fd1e268949f79f8194a1696486402.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/6ec2619c3f5f9ef037304453b52c3934b646eb921696486389.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/03c88522c76a433a6c34c9468996663603644ee21696486362.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/bcb98605b07bb158b4e72a6cae3fe33b9f0ff8e61696486346.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/19f1a5556070c14e24cb1c51dcf82a0035f5b2061696486331.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/f62805aa89507cda3dab0df88fa71bfd8881b5df1696486289.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/174c0050a8229d64ae358a3ca91cda0b84b822081696486275.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/feb1a204ae98962fdac394dd537110adb0c96af91696486267.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/13658c4a333c2a9ef79ba5e46a94f680e64be0cc1696486246.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/bc2474c6f08aa0a31f8bad60cacd2f72060455fd1696486233.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/373dd3418c640fafb7ce97f35feb537e3ab76a101696486225.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/f63899bc49d1f643f1c39ebe43d0532d0e5595b91696486199.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/1facbe261414d1800166fdf740d676841fbdeb071696486177.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/78dcee6d7be5a1c1f6490726cf604f890b124b5d1696486123.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/52b45aef4eef32b4ddac932b89c9abecb805832f1696486091.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/3cc31cff6a4f46abadc2b0e8952e019e237b7b151696486082.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/1bedf350e2bf938cc3c4242b19f0d1ed27ea6ba11696486059.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/424158a4d20d9f1fc39314f13ae5a5799215a45a1696486050.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/9c004a1a18787e2039b0f281a522d8b03e3c376c1696486035.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/4a5f925d7cdb7efe41745960df22960a71e055f41696486017.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/a7382a19731bb972017bd55ebc86d373a7632d6d1696486006.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/2403f37ba8c808bdff2a31db874a0e953e482dfb1696485922.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/e331a54bd7338abb21217dcf6ae4b74932c4575e1696485799.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/b46938d494581a552021687ffcce7316482576ac1696485788.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/93832a928ba8287322b420f7db670452824227101696485772.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/69dc2175d44daae9e424afdd13e46959e88c8f901696485750.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/7af818da7defc1ad17c8bfc1858c123d3c9a770c1696485738.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/81e03e8fd52e26e1a68a4fe3311a3a690bcdf4631696485720.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/b1ca545187d0e7f48a70f731b0058571078da48a1696485605.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/247a162466117a11542e9759db6cb48de489ba241696485582.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/2209e8dc341aec65e6885cd081f728fdabae7fce1696485543.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/c13f08c448dad68db297d057cfde4695f09f2a101696485519.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/48e617d32a8138e281605b34f6b3bb55d4bb22ea1696484797.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/864f9872fd3ba1aa3bace7127b513f6376657ae01696484774.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/d861a6387fd0bc7863d6354946cbe26a704b78aa1696484760.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/ae023f4c0f1732c4a598cbd7ceba14c75dc8b1511696484728.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/b130d5ebfc54d0275c17b93be0dad602fe0fdf7e1696484714.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/ce605a28468e5bb4c1b278ffd191108b779dc0251696484484.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/1c52c2b2c9aea3b12729ca93d6b769b7945fff561696484437.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/04803452ddfad42f9be9e5189372aae5face32d11696484227.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/95adab374e47a69633f03c4ca2ca361c866e9cfd1696483764.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/0a1387f4f53c11d7948a4c0c662afc30847336631696483711.jpg" /></a></div>
+									<div class="swiper-slide"><a href="#none" target="_self"><img alt="banner" src="./PEG/banner/3/817885fc482d36f44c6189444d8ff739c481e00d1696483615.jpg" /></a></div>
 									</div>
 								</div>
-								<!-- 슬라이드 이미지 -->
-								<div class="slides" u="slides">
-									<div class="banner_image_0"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/7845a25fef312579b5db6a262c83f5202a52ce7d1734920293.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_1"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/41bda3fcf25bebf4596c6501b34c044fb5a662231734920154.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_2"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/e695a2fe98b1dda4ea2054ab26c02a6bb98b07301734920131.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_3"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/bf8612757438ee7a970e892a976e5c25ad30a5991734920115.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_4"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/24234487a42f72849a1ee83a1d7a2c9cb47b542c1734920075.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_5"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/867a324fe3a9d3baa074fed9434dc740315cc3a11734920019.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_6"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/d63af7010b41633693f8a08907918759c0d6a3f11707797614.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_7"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/7ffd2bbf98e418d9080dc5c736e2605a18ffcabe1707797511.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_8"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/2cb8f094c537cff902a3c1cb6b418821f93e2fa61702891785.png"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_9"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/6aac47e7e4b11757dc79657e2860e84c165524331728381235.png"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_10"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/cb7ae69d2af8243484cfeb477edc8d046938ce5c1702891798.png"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_11"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/1a8b65e8d8d7f60ef170ea927e6f5760727305071702891806.png"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_12"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/f02b07a6a1975e706e87626393f681f6ddea2c171698196535.png"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_13"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/1384be79c6eb5e050418a24ad1f64d332432f74c1697435919.png"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_14"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/980a388a31a85fc20fc4396cef29d2504e21b9321696487987.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_15"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/28e6594123148184ea2e2e53346708fc05e64a6d1696487972.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_16"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/3ef95b3110dd1659a2d861344a8e5d7ce553d5881696487922.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_17"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/c43c14493b9027022af641a65b1bd16db00bb18d1696487911.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_18"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/0671d168715e0baad208def68c557368b790eed81696487894.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_19"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/c8a473d1ed3144988523bf35d2a926e2a84bc2fa1696487883.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_20"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/918b33a433e5c1f6e2e0b9a6aa7c97750ef5ae001696487814.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_21"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/ab1cdf084f02eb85efd14f9581365c6f1361dd2d1696487772.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_22"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/5eeb9d6a967a364483a275957d33bc0c1db5ea2e1696487761.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_23"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/3167b0ad265cd0c51c1a9bb90ecbe688054c933f1696487576.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_24"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/4753505818b575cec73af616d1d231d6f04ad3cf1696487516.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_25"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/feacd0a4aa60c4f2868e717b21bd31cffcc94cad1696487368.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_26"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/339e31fabc43c59658f8da50bc5376301b5fa4b01696487357.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_27"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/56a94786fe6ec0c52083024b94109e8634d4cf941696487334.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_28"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/b5ce53d1e7799c72a95d14c0ae33971728d032801696487321.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_29"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/d4c27e6a5ef6d007f46bf1b484c3192acaaf72341696487301.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_30"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/597016156a955ea22e4c76cf953ecacf11e647211696487286.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_31"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/a4a9a3ad61b81ae47d15bf17c3d9fa9c88164e2e1696487230.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_32"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/435ccaeceefb0a7e7c5b5cdcca3383c38950bd901696487214.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_33"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/d0f8740def1670e6d18107954f4a8816d3dad8271696487198.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_34"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/0673c582fa72eba1d79b48b2ff4da23bd163087a1696487172.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_35"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/b8b29e2710ebac10b3e3f0297d7a600e7cfb73531696487156.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_36"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/6895d62bfb632f062752bcd0e7fe6ce2486cbae11696487122.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_37"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/e4a1e314fd9a3e4c08aa55e4cccbda9f211f8a8c1696487097.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_38"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/e05e2e015eb0937cba0a1b0c603bcff394f662a91696487058.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_39"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/c1e2f91357edd44303b33a07a1fe6b847e8a475b1696487046.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_40"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/701672020f17666465ce52cc4400e97a3f5022ab1696486573.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_41"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/d7fdd909e4440fb0981f5dddfbfcf81a2eda255f1696486536.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_42"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/d010f31bbd5628a540e78e12f2db79b7fd4e3cbb1696486519.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_43"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/22e66673f3afb38e14a3ab2a173a2f2faa4823741696486500.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_44"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/3b201d5e103230b441734e05f4c5cf6873bc6f361696486490.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_45"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/757f15a93adb9a713640179ffa758e57126998131696486469.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_46"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/a746aa59a2a215c89a07bb10c7d1490ae95b35221696486459.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_47"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/e12ade9d8ce74a297ea6118a663fe05d12e122951696486422.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_48"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/227e146b1bc102da484b1fd1e268949f79f8194a1696486402.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_49"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/6ec2619c3f5f9ef037304453b52c3934b646eb921696486389.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_50"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/03c88522c76a433a6c34c9468996663603644ee21696486362.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_51"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/bcb98605b07bb158b4e72a6cae3fe33b9f0ff8e61696486346.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_52"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/19f1a5556070c14e24cb1c51dcf82a0035f5b2061696486331.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_53"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/f62805aa89507cda3dab0df88fa71bfd8881b5df1696486289.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_54"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/174c0050a8229d64ae358a3ca91cda0b84b822081696486275.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_55"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/feb1a204ae98962fdac394dd537110adb0c96af91696486267.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_56"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/13658c4a333c2a9ef79ba5e46a94f680e64be0cc1696486246.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_57"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/bc2474c6f08aa0a31f8bad60cacd2f72060455fd1696486233.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_58"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/373dd3418c640fafb7ce97f35feb537e3ab76a101696486225.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_59"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/f63899bc49d1f643f1c39ebe43d0532d0e5595b91696486199.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_60"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/1facbe261414d1800166fdf740d676841fbdeb071696486177.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_61"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/78dcee6d7be5a1c1f6490726cf604f890b124b5d1696486123.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_62"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/52b45aef4eef32b4ddac932b89c9abecb805832f1696486091.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_63"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/3cc31cff6a4f46abadc2b0e8952e019e237b7b151696486082.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_64"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/1bedf350e2bf938cc3c4242b19f0d1ed27ea6ba11696486059.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_65"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/424158a4d20d9f1fc39314f13ae5a5799215a45a1696486050.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_66"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/9c004a1a18787e2039b0f281a522d8b03e3c376c1696486035.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_67"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/4a5f925d7cdb7efe41745960df22960a71e055f41696486017.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_68"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/a7382a19731bb972017bd55ebc86d373a7632d6d1696486006.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_69"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/2403f37ba8c808bdff2a31db874a0e953e482dfb1696485922.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_70"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/e331a54bd7338abb21217dcf6ae4b74932c4575e1696485799.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_71"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/b46938d494581a552021687ffcce7316482576ac1696485788.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_72"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/93832a928ba8287322b420f7db670452824227101696485772.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_73"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/69dc2175d44daae9e424afdd13e46959e88c8f901696485750.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_74"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/7af818da7defc1ad17c8bfc1858c123d3c9a770c1696485738.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_75"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/81e03e8fd52e26e1a68a4fe3311a3a690bcdf4631696485720.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_76"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/b1ca545187d0e7f48a70f731b0058571078da48a1696485605.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_77"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/247a162466117a11542e9759db6cb48de489ba241696485582.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_78"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/2209e8dc341aec65e6885cd081f728fdabae7fce1696485543.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_79"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/c13f08c448dad68db297d057cfde4695f09f2a101696485519.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_80"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/48e617d32a8138e281605b34f6b3bb55d4bb22ea1696484797.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_81"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/864f9872fd3ba1aa3bace7127b513f6376657ae01696484774.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_82"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/d861a6387fd0bc7863d6354946cbe26a704b78aa1696484760.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_83"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/ae023f4c0f1732c4a598cbd7ceba14c75dc8b1511696484728.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_84"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/b130d5ebfc54d0275c17b93be0dad602fe0fdf7e1696484714.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_85"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/ce605a28468e5bb4c1b278ffd191108b779dc0251696484484.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_86"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/1c52c2b2c9aea3b12729ca93d6b769b7945fff561696484437.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_87"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/04803452ddfad42f9be9e5189372aae5face32d11696484227.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_88"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/95adab374e47a69633f03c4ca2ca361c866e9cfd1696483764.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_89"><a
-											href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/0a1387f4f53c11d7948a4c0c662afc30847336631696483711.jpg"
-												style="width:340px;height:350px" /></a></div>
-									<div class="banner_image_90"><a href="#none"
-											target="_self"><img alt="banner"
-												src="./PEG/banner/3/817885fc482d36f44c6189444d8ff739c481e00d1696483615.jpg"
-												style="width:340px;height:350px" /></a></div>
-								</div>
-								<!-- 불릿 -->
-								<div class="banner-bullet style-circle position_bl"
-									style="position: absolute; display:none" u="navigator">
-									<div style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"
-										u="prototype"></div>
-								</div>
-								<!-- 화살표 : 좌측 -->
-								<span class="banner-arrow-left"
-									style="width: 55px; height: 55px; top: 123px;left: 8px;display:none"
-									u="arrowleft"></span>
-								<!-- 화살표 : 우측 -->
-								<span class="banner-arrow-right"
-									style="width: 55px; height: 55px; top: 123px;right: 8px;display:none"
-									u="arrowright"></span>
 							</div>
-							<script src="/rankup_module/rankup_banner_v2/rankup_banner.js"></script>
 							<script>
 								$J(function ($) {
-
-									var banner = new RANKUPBanner('banner_3', 'carousel');
-
-									var banner_option = {
-
-										interval: 2000, //전환시간
-
-										duration: 500, //전환속도
-
-										orientation_play: 1, //1, //슬라이드방향
-
-										orientation_drag: 1, //0, //드래그 방향
-
-										arrow: 0, //화살표 사용여부
-
-										bullet: 0, //불릿 사용여부
-
-										bullet_position: 0,
-
-										hover: 0,
-
-										play_step: 4,
-
-										display_pieces: 6,
-
-										slide_width: 340,
-
-										slide_spacing: 30
-
-									};
-
-									banner.init(banner_option);
-
+									var swiper = new Swiper('#banner_3 .banner-swiper', {
+										slidesPerView: 6,
+										slidesPerGroup: 4,
+										spaceBetween: 30,
+										loop: true,
+										autoplay: {
+											delay: 2000,
+											disableOnInteraction: false,
+										},
+										speed: 500,
+										breakpoints: {
+											320: {
+												slidesPerView: 1,
+												slidesPerGroup: 1,
+											},
+											768: {
+												slidesPerView: 3,
+												slidesPerGroup: 2,
+											},
+											1024: {
+												slidesPerView: 4,
+												slidesPerGroup: 3,
+											},
+											1280: {
+												slidesPerView: 5,
+												slidesPerGroup: 4,
+											},
+											1920: {
+												slidesPerView: 6,
+												slidesPerGroup: 4,
+											}
+										}
+									});
 								});
 							</script>
 						</div>
@@ -1201,7 +700,7 @@
 									}
 								</style>
 								<div class="banner-wrap first" data-position="main4" data-type="fix" id="banner_15">
-									<div class="banner_image_0"><img alt="banner"
+									<div class="swiper-slide"><img alt="banner"
 											src="./PEG/banner/15/28a9e247b6d0f5d85cd94ae39fc7aab5a1f6ca7c1695003190.png"
 											style="width:342px;height:172px" /></div>
 								</div>
@@ -1240,55 +739,91 @@
 							<div id="main5">
 								<!-- 고정형 배너 템플릿 -->
 								<style>
-									#banner_17.banner-wrap {
+								#banner_17.banner-wrap {
 
-										overflow: hidden;
+									overflow: hidden;
 
-										clear: both;
+									clear: both;
 
-									}
-
-
-
-									#banner_17.banner-wrap {
-
-										width: 425px;
-
-										height: 306px;
-
-										text-align: right;
-
-									}
+								}
 
 
 
-									#banner_17.banner-wrap div {
+								#banner_17.banner-wrap {
 
-										margin-top: 10px;
+									width: 425px;
 
-									}
+									height: 306px;
+
+									text-align: left;
+
+									display: flex;
+
+									flex-wrap: wrap;
+
+									justify-content: flex-start;
+
+									align-items: flex-start;
+
+								}
 
 
 
-									.banner_image_0 {
+								#banner_17.banner-wrap a {
 
-										margin: 0px !important;
+									display: inline-block;
 
-									}
+									width: calc(33.33% - 7px);
+
+									margin-right: 10px;
+
+									margin-bottom: 10px;
+
+								}
+
+
+
+								#banner_17.banner-wrap a:nth-child(3n) {
+
+									margin-right: 0;
+
+								}
+
+
+
+								#banner_17.banner-wrap a img {
+
+									width: 100%;
+
+									height: auto;
+
+									display: block;
+
+								}
+
+
+
+								#banner_17.banner-wrap div {
+
+									margin-top: 10px;
+
+								}
+
+
+
+								.banner_image_0 {
+
+									margin: 0px !important;
+
+								}
 								</style>
 								<div class="banner-wrap first" data-position="main5" data-type="fix" id="banner_17">
-									<div class="banner_image_0"><a href="#none"><img
-												src="/wysiwyg/PEG/se2_16946688989421.png" /></a><a
-											href="#none" style="margin-left:10px;"><img
-												src="/wysiwyg/PEG/se2_16946688989684.png" /></a><a href="#none"
-											style="margin-left:10px;"><img
-												src="/wysiwyg/PEG/se2_16946688989151.png" /></a></div>
-									<div class="banner_image_1"><a href="#none"><img
-												src="/wysiwyg/PEG/se2_16946699456559.png" /></a><a
-											href="#none" style="margin-left:10px;"><img
-												src="/wysiwyg/PEG/se2_16946699456839.png" /></a><a
-											href="#none" style="margin-left:10px;"><img
-												src="/wysiwyg/PEG/se2_16946699457133.png" /></a></div>
+									<a href="#none"><img src="/wysiwyg/PEG/se2_16946688989421.png" /></a>
+									<a href="#none"><img src="/wysiwyg/PEG/se2_16946688989684.png" /></a>
+									<a href="#none"><img src="/wysiwyg/PEG/se2_16946688989151.png" /></a>
+									<a href="#none"><img src="/wysiwyg/PEG/se2_16946699456559.png" /></a>
+									<a href="#none"><img src="/wysiwyg/PEG/se2_16946699456839.png" /></a>
+									<a href="#none"><img src="/wysiwyg/PEG/se2_16946699457133.png" /></a>
 								</div>
 							</div>
 						</div>
@@ -1367,7 +902,7 @@
 										}
 									</style>
 									<div class="banner-wrap first" data-position="main6" data-type="fix" id="banner_18">
-										<div class="banner_image_0"><img alt="banner"
+										<div class="swiper-slide"><img alt="banner"
 												src="./PEG/banner/18/a1dc785e4db0be808bbd2d7530151196313f4af31697681730.png"
 												style="width:550px;height:250px" /></div>
 									</div><!-- 고정형 배너 템플릿 -->
@@ -1409,7 +944,7 @@
 										}
 									</style>
 									<div class="banner-wrap" data-position="main6" data-type="fix" id="banner_30">
-										<div class="banner_image_0"><a
+										<div class="swiper-slide"><a
 												href="#none" target="_self"><img
 													alt="banner"
 													src="./PEG/banner/30/c2f0d2963078e7db7e572183eedcd488b987ab0c1745208879.jpg"
@@ -1489,7 +1024,7 @@
 										}
 									</style>
 									<div class="banner-wrap first" data-position="main7" data-type="fix" id="banner_19">
-										<div class="banner_image_0"><a href="#none" target="_self"><img
+										<div class="swiper-slide"><a href="#none" target="_self"><img
 													alt="banner"
 													src="./PEG/banner/19/037d971094900437981483152c1e41f124e0ea031697684736.png"
 													style="width:550px;height:226px" /></a></div>
@@ -1570,7 +1105,7 @@
 										}
 									</style>
 									<div class="banner-wrap first" data-position="main8" data-type="fix" id="banner_20">
-										<div class="banner_image_0"><img alt="banner"
+										<div class="swiper-slide"><img alt="banner"
 												src="./PEG/banner/20/be1d7ca82256e7da71843be55d78445949ce86ca1694511077.png"
 												style="width:550px;height:384px" /></div>
 									</div>
@@ -1648,10 +1183,10 @@
 										}
 									</style>
 									<div class="banner-wrap first" data-position="main9" data-type="fix" id="banner_23">
-										<div class="banner_image_0"><img alt="banner"
+										<div class="swiper-slide"><img alt="banner"
 												src="./PEG/banner/23/d5797e3e7a6e7f8cf61f4e812036e4438276599f1697681766.png"
 												style="width:550px;height:226px" /></div>
-										<div class="banner_image_1"><a href="#none" target="_self"><img
+										<div class="swiper-slide"><a href="#none" target="_self"><img
 													alt="banner"
 													src="./PEG/banner/23/40b8e6ed3a98d73c468f93d6203e0b14a4713dda1697684753.png"
 													style="width:550px;height:226px" /></a></div>
