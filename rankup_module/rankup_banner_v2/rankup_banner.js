@@ -17,11 +17,11 @@ RANKUPBanner.prototype = {
 				if (!hasJssorPath) {
 					// 절대 경로 시도
 					require.config({
-						baseUrl: '/Libs/_js',
+						baseUrl: '/Libs/js',
 						paths: {
-							'jssor/jssor.core': '/Libs/_js/jssor/jssor.core',
-							'jssor/jssor.slider.min': '/Libs/_js/jssor/jssor.slider.min',
-							'jssor/jssor.utils': '/Libs/_js/jssor/jssor.utils'
+							'jssor/jssor.core': '/Libs/js/jssor/jssor.core',
+							'jssor/jssor.slider.min': '/Libs/js/jssor/jssor.slider.min',
+							'jssor/jssor.utils': '/Libs/js/jssor/jssor.utils'
 						}
 					});
 				}

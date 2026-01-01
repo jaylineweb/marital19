@@ -27,6 +27,35 @@
 		var domain = "http://" + document.domain + "/"
 	</script>
 	<script src="./Libs/js/require.js"></script>
+	<script>
+		// RequireJS 설정 - 절대 경로 사용 (require.js 로드 후 실행)
+		(function() {
+			if (typeof require !== 'undefined' && require.config) {
+				require.config({
+					baseUrl: '/Libs/js',
+					paths: {
+						'jssor/jssor.core': '/Libs/js/jssor/jssor.core',
+						'jssor/jssor.slider.min': '/Libs/js/jssor/jssor.slider.min',
+						'jssor/jssor.utils': '/Libs/js/jssor/jssor.utils'
+					}
+				});
+			} else {
+				// require.js가 아직 로드되지 않은 경우 약간의 지연 후 재시도
+				setTimeout(function() {
+					if (typeof require !== 'undefined' && require.config) {
+						require.config({
+							baseUrl: '/Libs/js',
+							paths: {
+								'jssor/jssor.core': '/Libs/js/jssor/jssor.core',
+								'jssor/jssor.slider.min': '/Libs/js/jssor/jssor.slider.min',
+								'jssor/jssor.utils': '/Libs/js/jssor/jssor.utils'
+							}
+						});
+					}
+				}, 100);
+			}
+		})();
+	</script>
 	<script src="./Libs/js/prototype.js?v=1"></script>
 	<script src="./Libs/js/jquery.min.js"></script>
 	<script>
@@ -2012,6 +2041,38 @@
 	</div><!-- body_wrap End -->
 	<!-- -->
 	<script src="/tracer/tracerapi.js"></script>
+	<script>
+		// tracerapi.js 초기화 - 스크립트가 로드된 후 실행
+		(function() {
+			// jQuery가 로드될 때까지 대기
+			var initTracer = function() {
+				if (typeof jQuery === 'undefined' && typeof $ === 'undefined') {
+					setTimeout(initTracer, 100);
+					return;
+				}
+				
+				var $tracer = typeof jQuery !== 'undefined' ? jQuery : $;
+				
+				// DOM이 준비되면 실행
+				$tracer(document).ready(function() {
+					// tracerapi.js의 함수들이 정의되어 있는지 확인
+					if (typeof callTracerInit !== 'undefined') {
+						try {
+							callTracerInit();
+							console.log('tracerapi 초기화 완료');
+						} catch(e) {
+							console.warn('tracerapi 초기화 중 오류:', e);
+						}
+					} else {
+						console.log('tracerapi.js가 로드되었지만 callTracerInit 함수를 찾을 수 없습니다.');
+					}
+				});
+			};
+			
+			// 스크립트가 로드된 직후 실행 시작
+			setTimeout(initTracer, 50);
+		})();
+	</script>
 </body>
 
 </html>
