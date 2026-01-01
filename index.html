@@ -32,11 +32,11 @@
 		(function() {
 			if (typeof require !== 'undefined' && require.config) {
 				require.config({
-					baseUrl: '/Libs/js',
+					baseUrl: './Libs/js',
 					paths: {
-						'jssor/jssor.core': '/Libs/js/jssor/jssor.core',
-						'jssor/jssor.slider.min': '/Libs/js/jssor/jssor.slider.min',
-						'jssor/jssor.utils': '/Libs/js/jssor/jssor.utils'
+						'jssor/jssor.core': './Libs/js/jssor/jssor.core',
+						'jssor/jssor.slider.min': './Libs/js/jssor/jssor.slider.min',
+						'jssor/jssor.utils': './Libs/js/jssor/jssor.utils'
 					}
 				});
 			} else {
@@ -44,11 +44,11 @@
 				setTimeout(function() {
 					if (typeof require !== 'undefined' && require.config) {
 						require.config({
-							baseUrl: '/Libs/js',
+							baseUrl: './Libs/js',
 							paths: {
-								'jssor/jssor.core': '/Libs/js/jssor/jssor.core',
-								'jssor/jssor.slider.min': '/Libs/js/jssor/jssor.slider.min',
-								'jssor/jssor.utils': '/Libs/js/jssor/jssor.utils'
+								'jssor/jssor.core': './Libs/js/jssor/jssor.core',
+								'jssor/jssor.slider.min': './Libs/js/jssor/jssor.slider.min',
+								'jssor/jssor.utils': './Libs/js/jssor/jssor.utils'
 							}
 						});
 					}
