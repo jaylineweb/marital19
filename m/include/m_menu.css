@@ -1,0 +1,51 @@
+/* 2018-01-05 모바일 메뉴 pej 작업 lyj 추가 */
+.title-wrap {margin-bottom:15px;padding:5px 0;border-bottom:1px solid #dedede;} /* 2018-01-05 모바일 메뉴 수정 */
+
+.menu-wrap {position:fixed; height:100%; overflow-y:auto;left:-320px; width:320px; z-index:999; border-right:1px solid #ddd;background-color:#fff;}
+
+/*로그인,로그아웃,회원가입,회원정보수정*/
+.sub_header_wrap {width:100%; height:50px; background:#0F2053 !important;}
+
+.sub_header_wrap .sub_header {float:left; margin-top:15px;}
+.sub_header_wrap .sub_header li {float:left; margin-left:5px;}
+.sub_header_wrap .sub_header li a {color:#fff; display:inline-block; letter-spacing:-1px; font-size:13px;}/* 모바일 메뉴 2018-01-15 pej 수정:color */
+
+/*고객센터연락번호*/
+.sub_header_wrap .customer {color:#fdff5c; font-size:22px; font-weight:bold; float:left; margin:12px 0 0 11px;}
+.sub_header_wrap .customer img {width:24px; margin-right:4px; vertical-align:middle; display:inline-block; margin-bottom:7px;}
+.sub_header_wrap .customer span.number {vertical-align:middle;color:#ffeb66; display:inline-block; margin-bottom:6px; font-size:24px;}/* 모바일 메뉴 2018-01-15 pej 수정:color */
+
+/*닫기 버튼*/
+.sub_header_wrap .btn_close {float:right;}
+.sub_header_wrap .btn_close img {width:28px; display:inline-block; margin-top:1px; margin-right:-3px;}
+
+
+
+/*상단배너*/
+.icon_menu {width:99%; margin:10px 0; overflow:hidden;}
+.icon_menu .icon01 {border:1px solid #ddd; width:22%; padding:10px 0px;  float:left; margin-left:7px;}
+.icon_menu .icon01:first-child {margin-left:5px;}
+.icon_menu .icon01 img {width:60%;}
+
+.icon_menu .icon01 li {text-align:center; letter-spacing:-1px;}
+.icon_menu .icon01 li a {color:#0e88c1; font-size:14px; font-weight:bold;}
+
+/*메뉴*/
+
+.gnb_wrap h2 {background:#666; color:#FFF; font-size:12px; height:20px; line-height:20px; padding-left:4px;}
+
+/*1차 메뉴*/
+.gnb_wrap .gnb {border-top:1px solid #ddd;}
+.gnb_wrap .gnb>li {border-bottom:1px solid #ddd; text-indent:5px; line-height:38px; letter-spacing:-1px;} 
+.gnb_wrap .gnb>li>a {color:#555; font-weight:bold; font-size:15px;}
+.gnb_wrap .gnb>li>span {display:inline-block;width:35px; float:right;text-align:center;cursor:pointer}
+.gnb_wrap .gnb>li>span>img {width:10px;}
+
+/*2차 메뉴*/
+.gnb_wrap .gnb li .sub_gnb {background:#E6E6E6; display:none;}
+.gnb_wrap .gnb li .sub_gnb li {margin:0; height:28px; border-top:1px solid #FAFAFA; line-height:28px; text-indent:5px;}
+.gnb_wrap .gnb li .sub_gnb li a {color:#666; font-size:14px;}
+
+/* 2018-01-05 모바일 메뉴 끝 */
+.nav .m-btn {display:block;position:absolute;left:0;padding-top:22px; text-align:center; height:40px; width:50px;}  /* 모바일 메뉴 2018-01-05 lyj 수정 */
+.nav .m-btn img {width:24px;}  /* 모바일 메뉴 2018-01-05 lyj 수정 */
